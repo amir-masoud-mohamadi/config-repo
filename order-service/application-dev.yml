@@ -1,0 +1,22 @@
+  datasource:
+    url: jdbc:mysql://localhost:3306/deepseek?createDatabaseIfNotExist=true
+    username: root
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: create-drop         # یا validate/create-drop بسته به نیازتان
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        show_sql: true
+eureka:
+  instance:
+    metadata-map:
+      version: 2.1.0
+      region: tehran
+      weight: 2 # برای Load Balancing
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+    healthcheck:
+      enabled: true

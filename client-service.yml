@@ -1,4 +1,4 @@
 server:
   port: 8089
 custom:
-  message: "test2"
+  message: "test3"
